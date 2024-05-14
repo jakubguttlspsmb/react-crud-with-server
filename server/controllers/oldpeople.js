@@ -1,8 +1,8 @@
-const Cat = require("../models/cats");
+const OldPeople = require("../models/oldpeople");
 
-exports.getAllCats = async (req, res) => {
+exports.getAllOldPeople = async (req, res) => {
   try {
-    const result = await Cat.find();
+    const result = await OldPeople.find();
     if (result && result.length !== 0) {
       return res.status(200).send({
         msg: "Cats found!",
@@ -15,27 +15,27 @@ exports.getAllCats = async (req, res) => {
   }
 };
 
-exports.getCatById = async (req, res) => {
+exports.getOldPeopleById = async (req, res) => {
   try {
-    const result = await Cat.findById(req.params.id);
+    const result = await OldPeople.findById(req.params.id);
     if (result) {
       return res.status(200).send({
-        msg: "Cat found",
+        msg: "OldPeople found",
         payload: result,
       });
     }
-    res.status(404).send({ msg: "Cat not found" });
+    res.status(404).send({ msg: "OldPeople not found" });
   } catch (error) {
     res.status(500).send(error);
   }
 };
 
-exports.deleteCat = async (req, res) => {
+exports.deleteOldPeople = async (req, res) => {
   try {
-    const result = await Cat.findByIdAndDelete(req.params.id);
+    const result = await OldPeople.findByIdAndDelete(req.params.id);
     if (result) {
       return res.status(200).send({
-        msg: "Cat deleted",
+        msg: "OldPeople deleted",
       });
     }
     res.status(500).send({ msg: "Something went wrong" });
@@ -44,44 +44,48 @@ exports.deleteCat = async (req, res) => {
   }
 };
 
-exports.updateCat = async (req, res) => {
+exports.updateOldPeople = async (req, res) => {
   try {
     const data = {
       name: req.body.name,
-      legs: req.body.legs,
-      color: req.body.color,
+      secondname: req.body.secondname,
+      age: req.body.age,
+      haircolor: req.body.haircolor,
+      addiction: req.body.addiction,
     };
-    const result = await Cat.findByIdAndUpdate(req.params.id, data);
+    const result = await OldPeople.findByIdAndUpdate(req.params.id, data);
     if (result) {
       return res.status(200).send({
-        msg: "Cat updated",
+        msg: "OldPeople updated",
         payload: result,
       });
     }
     res.status(500).send({
-      msg: "Cat was not updated",
+      msg: "OldPeople was not updated",
     });
   } catch (error) {
     res.status(500).send(error);
   }
 };
 
-exports.createCat = async (req, res) => {
+exports.createOldPeople = async (req, res) => {
   try {
-    const data = new Cat({
+    const data = new OldPeople({
       name: req.body.name,
-      legs: req.body.legs,
-      color: req.body.color,
+      secondname: req.body.secondname,
+      age: req.body.age,
+      haircolor: req.body.haircolor,
+      addiction: req.body.addiction,
     });
     const result = await data.save();
     if (result) {
       return res.status(201).send({
-        msg: "Cat created",
+        msg: "OldPeople created",
         payload: result,
       });
     }
     res.status(500).send({
-      msg: "Cat was not created",
+      msg: "OldPeople was not created",
     });
   } catch (error) {
     res.status(500).send(error);
