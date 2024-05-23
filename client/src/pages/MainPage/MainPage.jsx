@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 export default function MainPage() {
   return (
     <>
-      <h1>Main page</h1>
-      <Link to={"/createcat"}>
-        <p>Create cat</p>
+      <h1>Výtejte v domově důchodců</h1>
+      <Link to={"/createduch"}>
+        <p>Vytvoř si svého důchodce</p>
       </Link>
-      <Link to={"/cats"}>
-        <p>Cats</p>
+      <Link to={"/duchs"}>
+        <p>Tvoji důchodci</p>
       </Link>
     </>
   );

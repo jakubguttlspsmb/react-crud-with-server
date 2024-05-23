@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage/MainPage";
 import About from "./About/About";
-import CatCreateForm from "./CatCreateForm/CatCreateForm";
-import CatUpdateForm from "./CatUpdateForm/CatUpdateForm";
-import CatView from "./CatView/CatView";
-import CatList from "./CatList/CatList";
-import CreatedCat from "./CatCreateForm/CreatedCat";
+import DuchCreateForm from "./DuchCreateForm/DuchCreateForm";
+import DuchUpdateForm from "./DuchUpdateForm/DuchUpdateForm";
+import DuchView from "./DuchView/DuchView";
+import DuchList from "./DuchList/DuchList";
+import CreatedDuch from "./DuchCreateForm/CreatedDuch";
 
 export default function AppRoutes() {
   return (
@@ -14,11 +14,11 @@ export default function AppRoutes() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/createcat" element={<CatCreateForm />} />
-          <Route path="/updatecat/:id" element={<CatUpdateForm />} />
-          <Route path="/cat/:id" element={<CatView />} />
-          <Route path="/cats" element={<CatList />} />
-          <Route path="/createdcat/:id" element={<CreatedCat />} />
+          <Route path="/createduch" element={<DuchCreateForm />} />
+          <Route path="/updateduch/:id" element={<DuchUpdateForm />} />
+          <Route path="/duch/:id" element={<DuchView />} />
+          <Route path="/duchs" element={<DuchList />} />
+          <Route path="/createdduch/:id" element={<CreatedDuch />} />
         </Routes>
       </BrowserRouter>
     </>
