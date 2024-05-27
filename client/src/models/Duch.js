@@ -1,5 +1,5 @@
 export const getDuchs = async () => {
-  const req = await fetch("http://localhost:3000/duchs", {
+  const req = await fetch("http://localhost:3000/oldpeople", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -14,7 +14,7 @@ export const getDuchs = async () => {
   };
 };
 export const getDuch = async (id) => {
-  const req = await fetch(`http://localhost:3000/duchs/${id}`, {
+  const req = await fetch(`http://localhost:3000/oldpeople/${id}`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -29,7 +29,7 @@ export const getDuch = async (id) => {
   };
 };
 export const createDuch = async (formData) => {
-  const req = await fetch(`http://localhost:3000/duchs`, {
+  const req = await fetch(`http://localhost:3000/oldpeople`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export const createDuch = async (formData) => {
   };
 };
 export const updateDuch = async (id, formData) => {
-  const req = await fetch(`http://localhost:3000/duchs/${id}`, {
+  const req = await fetch(`http://localhost:3000/oldpeople/${id}`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export const updateDuch = async (id, formData) => {
   };
 };
 export const deleteDuch = async (id) => {
-  const req = await fetch(`http://localhost:3000/duchs/${id}`, {
+  const req = await fetch(`http://localhost:3000/oldpeople/${id}`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",

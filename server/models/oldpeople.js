@@ -6,7 +6,7 @@ const schema = mongoose.Schema({
   age: { type: Number, required: true },
   haircolor: { type: String, required: true },
   addiction: { type: String, required: true },
-  image: { type: Image, required: true },
+  image: { type: String, required: true },
 });
 
 module.exports = mongoose.model("Oldpeople", schema);

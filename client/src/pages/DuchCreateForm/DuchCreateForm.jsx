@@ -14,35 +14,73 @@ export default function DuchCreateForm() {
     } else {
       setInfo(duch.msg);
     }
-  }
-  
+  };
+
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value});
-  }
-  
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handlePost = (e) => {
     e.preventDefault();
     postForm();
-  }
+  };
 
   const redirectToSuccessPage = (id) => {
-    return navigate(`/createdduch/${id}`)
-  }
+    return navigate(`/createdduch/${id}`);
+  };
 
   return (
     <>
       <h1>Forma na důchodce</h1>
       <form>
-        <input type="text" name="name" required placeholder="Enter Crackheads name" onChange={e => handleChange(e)}/>
-        <input type="text" name="surename" required placeholder="Enter Crackheads surename" onChange={e => handleChange(e)}/>
-        <input type="number" name="age" required placeholder="Enter Crackheads age" onChange={e => handleChange(e)}/>
-        <input type="text" name="haircolor" required placeholder="Enter Crackheads haircolor" onChange={e => handleChange(e)}/>
-        <input type="text" name="addiction" required placeholder="Enter Crackheads addictions" onChange={e => handleChange(e)}/>
-        <input type="file" name="image" required placeholder="Enter Crackheads photo" onChange={e => handleChange(e)}/>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Enter Crackheads name"
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          type="text"
+          name="surename"
+          required
+          placeholder="Enter Crackheads surename"
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          type="number"
+          name="age"
+          required
+          placeholder="Enter Crackheads age"
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          type="text"
+          name="haircolor"
+          required
+          placeholder="Enter Crackheads haircolor"
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          type="text"
+          name="addiction"
+          required
+          placeholder="Enter Crackheads addictions"
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          type="file"
+          name="image"
+          required
+          placeholder="Enter Crackheads photo"
+          onChange={(e) => handleChange(e)}
+        />
 
-        <button onClick={handlePost}>
-          Vytoř Důchodce
-        </button>
+        <button onClick={handlePost}>Vytoř Důchodce</button>
+
+        <form action="/profile" method="post" enctype="multipart/form-data">
+          <input type="file" name="avatar" />
+        </form>
       </form>
       <Link to={"/"}>
         <p>Zpět</p>

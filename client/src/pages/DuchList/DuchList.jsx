@@ -41,7 +41,7 @@ export default function DuchList() {
       <h1>List důchodců</h1>
       {
         duchs.map((duch, index) => (
-          <CatLink key={index} {...duch} />
+          <DuchLink key={index} {...duch} />
         ))
       }
       <Link to={"/"}>
