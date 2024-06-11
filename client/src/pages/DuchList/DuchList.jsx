@@ -14,7 +14,7 @@ export default function DuchList() {
       setDuchs(data.payload);
       setLoaded(true);
     }
-  }
+  };
 
   useEffect(() => {
     load();
@@ -25,7 +25,7 @@ export default function DuchList() {
       <>
         <p>Důchodce nebyl nalezen</p>
       </>
-    )
+    );
   }
 
   if (!isLoaded) {
@@ -33,17 +33,29 @@ export default function DuchList() {
       <>
         <p>Důchodce se načítá...</p>
       </>
-    )
+    );
   }
 
   return (
     <>
       <h1>List důchodců</h1>
-      {
-        duchs.map((duch, index) => (
-          <DuchLink key={index} {...duch} />
-        ))
-      }
+      <div>
+        {duchs.map((duch, index) => (
+          <div key={index} className="duch-container">
+            {/* Display the DuchLink component with the current duch props */}
+            <DuchLink {...duch} />
+
+            {/* Display additional information or components */}
+            <div className="additional-info">
+              <h3>Additional Information</h3>
+              <p>{duch.secondname}</p>
+              <p>{duch.age}</p>
+            </div>
+
+            {/* Add more components or elements as needed */}
+          </div>
+        ))}
+      </div>
       <Link to={"/"}>
         <p>Zpět</p>
       </Link>

@@ -52,7 +52,6 @@ exports.updateOldPeople = async (req, res) => {
       age: req.body.age,
       haircolor: req.body.haircolor,
       addiction: req.body.addiction,
-      image: req.body.image,
     };
     const result = await OldPeople.findByIdAndUpdate(req.params.id, data);
     if (result) {
@@ -77,7 +76,6 @@ exports.createOldPeople = async (req, res) => {
       age: req.body.age,
       haircolor: req.body.haircolor,
       addiction: req.body.addiction,
-      image: req.body.image,
     });
     const result = await data.save();
     if (result) {

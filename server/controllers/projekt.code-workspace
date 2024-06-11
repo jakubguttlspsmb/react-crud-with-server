@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../multer-react-example"
+		},
+		{
+			"path": "../../../../Projekt-bazar-web-main"
+		}
+	],
+	"settings": {}
+}

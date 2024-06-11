@@ -19,6 +19,9 @@ export default function DuchCreateForm() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  const handleImageChange = (e) => {
+    setFormData({ ...formData, imgFile: e.target.files[0] });
+  };
 
   const handlePost = (e) => {
     e.preventDefault();
@@ -42,7 +45,7 @@ export default function DuchCreateForm() {
         />
         <input
           type="text"
-          name="surename"
+          name="secondname"
           required
           placeholder="Enter Crackheads surename"
           onChange={(e) => handleChange(e)}
@@ -68,19 +71,9 @@ export default function DuchCreateForm() {
           placeholder="Enter Crackheads addictions"
           onChange={(e) => handleChange(e)}
         />
-        <input
-          type="file"
-          name="image"
-          required
-          placeholder="Enter Crackheads photo"
-          onChange={(e) => handleChange(e)}
-        />
+      
 
         <button onClick={handlePost}>Vytoř Důchodce</button>
-
-        <form action="/profile" method="post" enctype="multipart/form-data">
-          <input type="file" name="avatar" />
-        </form>
       </form>
       <Link to={"/"}>
         <p>Zpět</p>

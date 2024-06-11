@@ -62,8 +62,10 @@ export default function CatView() {
       <h1>Zobraz důchodce</h1>
       <p>{id}</p>
       <p>{duch.name}</p>
-      <p>{duch.legs}</p>
-      <p>{duch.color}</p>
+      <p>{duch.secondname}</p>
+      <p>{duch.age}</p>
+      <p>{duch.haircolor}</p>
+      <p>{duch.addiction}</p>
       <form>
         <input type="text" placeholder={duch.name} onChange={handleChange} />
         <button onClick={handleDelete}>Vymazat</button>
