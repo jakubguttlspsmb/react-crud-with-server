@@ -36,6 +36,7 @@ export default function DuchCreateForm() {
   return (
     <>
       <div className="Idk"></div>
+      <h2 className="pervitin">Zde můžete vidět naše exponáty. </h2>
       <h1>Forma na důchodce</h1>
       <form>
         <input

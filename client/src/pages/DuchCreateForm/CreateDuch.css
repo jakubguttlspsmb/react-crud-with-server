@@ -1,8 +1,12 @@
 .Idk {
   background-image: url(./crackschool.jpg);
   width: 1900px;
-  height: 800px;
+  height: 1000px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.pervitin {
+  text-align: center;
 }

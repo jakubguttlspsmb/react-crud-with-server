@@ -47,18 +47,19 @@ export default function MainPage() {
       </div>
       <div className="ThirdContainer">
         <Link className="Text" to={"/createduch"}>
-          <p>chcete si zde ulozit svého důchodce</p>
+          <p>Uložte is zde svého důchodce</p>
         </Link>
         <Link className="Text" to={"/duchs"}>
-          <p>Tvoje úschovna důchodců</p>
+          <p>Uschovaní důchodců</p>
         </Link>
       </div>
-      <div>
-        <p>
-          Děkujeme, že jste si našli čas navštívit naši stránku. Pokud máte
-          jakékoliv dotazy nebo byste rádi získali více informací, neváhejte nás
-          kontaktovat. Jsme tu pro vás a vaše blízké. S úctou, Tým Domova pro
-          seniory se závislostmi
+      <div className="FourthContainer">
+        <p className="TextSmall">
+          Děkujeme, že jste si našli čas navštívit naši stránku.
+          <br /> Pokud máte jakékoliv dotazy nebo byste rádi získali více
+          informací, neváhejte nás kontaktovat.
+          <br /> Jsme tu pro vás a vaše blízké.
+          <br /> S úctou, Tým Domova pro seniory se závislostmi
         </p>
       </div>
     </div>

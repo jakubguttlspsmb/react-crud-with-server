@@ -41,18 +41,8 @@ export default function DuchList() {
       <h1>List důchodců</h1>
       <div>
         {duchs.map((duch, index) => (
-          <div key={index} className="duch-container">
-            {/* Display the DuchLink component with the current duch props */}
-            <DuchLink {...duch} />
-
-            {/* Display additional information or components */}
-            <div className="additional-info">
-              <h3>Additional Information</h3>
-              <p>{duch.secondname}</p>
-              <p>{duch.age}</p>
-            </div>
-
-            {/* Add more components or elements as needed */}
+          <div key={index} className="container">
+            <DuchLink {...duch}> </DuchLink>
           </div>
         ))}
       </div>

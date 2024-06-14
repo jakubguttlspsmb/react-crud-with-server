@@ -29,15 +29,26 @@ body {
   text-align: center;
   padding-top: 1.5em;
 }
+.ThirdContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.FourthContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .TextSmall {
   font-size: 1.5em;
 }
+
 b {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-.Text:link {
-  color: yellow;
+.Text {
+  font-size: 3em;
 }
 .Text:visited {
   color: grey;
