@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createDuch } from "../../models/Duch";
+import "../DuchCreateForm/CreateDuch.css";
 
 export default function DuchCreateForm() {
   const [formData, setFormData] = useState();
@@ -34,6 +35,7 @@ export default function DuchCreateForm() {
 
   return (
     <>
+      <div className="Idk"></div>
       <h1>Forma na důchodce</h1>
       <form>
         <input
@@ -71,7 +73,6 @@ export default function DuchCreateForm() {
           placeholder="Enter Crackheads addictions"
           onChange={(e) => handleChange(e)}
         />
-      
 
         <button onClick={handlePost}>Vytoř Důchodce</button>
       </form>
