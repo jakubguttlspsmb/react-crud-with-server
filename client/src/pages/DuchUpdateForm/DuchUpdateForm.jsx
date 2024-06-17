@@ -1,6 +1,8 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { updateDuch, getDuch } from "../../models/Duch";
+import "../MainPage/MainPage.css"
+
 
 export default function DuchUpdateForm() {
   const { id } = useParams();

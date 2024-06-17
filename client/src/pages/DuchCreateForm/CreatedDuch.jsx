@@ -1,4 +1,6 @@
 import { Link, useParams } from "react-router-dom";
+import "../MainPage/MainPage.css"
+
 
 export const width = screen.width;
 export default function CreatedDuch() {

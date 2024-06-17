@@ -1,6 +1,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { getDuch, deleteDuch } from "../../models/Duch";
 import { useState, useEffect } from "react";
+import "../MainPage/MainPage.css"
 
 export default function CatView() {
   const { id } = useParams();
